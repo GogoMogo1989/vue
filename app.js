@@ -2,26 +2,16 @@ const app = Vue.createApp({
    data() {
     return {
         showBooks: true,
-        title: "FInal emperior",
-        author : "kovács pista",
-        age : 12,
-        x: 0,
-        y:0
+        books :[
+            {title: "name of the wind", author: "kovács béla"},
+            {title: "name of the water", author: "kovács tamás"},
+            {title: "name of the soil", author: "kovács lackó"},
+        ]
     }
    },
    methods: {
     toggleShowBooks () {
         this.showBooks = !this.showBooks
-    },
-    handleEvent(event, data) {
-        console.log(event, event.type)
-        if (data){
-            console.log(data)
-        }
-    },
-    handleMousemove(event){
-        this.x = event.offsetX
-        this.y = event.offsetY
     }
    }
 })
