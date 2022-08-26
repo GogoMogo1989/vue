@@ -20,9 +20,13 @@
     <h1>Hello Vue</h1>
 
     <div id="app">
+
+        <a v-bind:href="url">google.com</a>
+
        <div v-if="showBooks">
          <ul>
             <li v-for="book in books">
+                <img v-bind:src="book.img" v-bind:alt="book.title">
                 <h3>{{ book.title }}</h3>
                 <p>{{ book.author }}</p>
             </li>
